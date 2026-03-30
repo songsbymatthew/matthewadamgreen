@@ -50,4 +50,718 @@
     font-size: 0.75rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--muted
+    color: var(--muted);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-cta {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,211,150,0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .nav-cta:hover { border-color: var(--accent); }
+
+  .nav-ig {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-ig:hover { color: var(--text); border-color: rgba(255,255,255,0.4); }
+
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 3rem 4rem;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--bg) 0%, transparent 45%),
+                linear-gradient(to top, var(--bg) 0%, transparent 20%);
+  }
+
+  .hero-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s forwards;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    line-height: 0.92;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.35s forwards;
+  }
+
+  .hero-title .the,
+  .hero-title .touch {
+    font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+    color: var(--text);
+    font-style: normal;
+  }
+
+  .hero-title .human {
+    font-size: clamp(4rem, 9vw, 9rem);
+    color: var(--accent);
+    font-style: italic;
+    display: block;
+    line-height: 0.9;
+  }
+
+  .hero-sub {
+    max-width: 520px;
+    font-size: 0.92rem;
+    line-height: 1.9;
+    color: var(--muted);
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.5s forwards;
+  }
+
+  .stats {
+    display: flex;
+    gap: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--line);
+    opacity: 0;
+    animation: fadeUp 0.7s 0.65s forwards;
+  }
+
+  .stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .stat-lbl {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .trusted-section {
+    padding: 3.5rem 3rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .trusted-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .trusted-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .trusted-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    transition: color 0.2s;
+    white-space: nowrap;
+    border: 1px solid rgba(255,211,150,0.15);
+    padding: 0.4rem 1rem;
+  }
+  .trusted-logo:hover { color: var(--accent); border-color: rgba(255,211,150,0.4); }
+
+  section {
+    padding: 5rem 3rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sec-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .sec-num {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .prop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .prop-item {
+    background: var(--surface);
+    padding: 2rem 2.5rem;
+    transition: background 0.25s;
+  }
+  .prop-item:hover { background: #1a1a1a; }
+
+  .prop-top {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .prop-icon {
+    font-size: 1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .prop-heading {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text);
+  }
+
+  .prop-text {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--muted);
+    padding-left: 1.8rem;
+  }
+
+  .track-item {
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .track-item:first-child { border-top: 1px solid var(--line); }
+  .track-item:hover { background: var(--surface); }
+
+  .track-row {
+    display: grid;
+    grid-template-columns: 3rem 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.6rem 0.5rem;
+  }
+
+  .track-num {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-align: center;
+  }
+
+  .track-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+  }
+
+  .track-meta {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .track-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .track-role {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(255,211,150,0.25);
+    padding: 0.28rem 0.7rem;
+  }
+
+  .track-btn {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    color: var(--text);
+  }
+  .track-item:hover .track-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+  .track-btn svg { width: 8px; height: 8px; }
+
+  .spotify-embed {
+    display: none;
+    padding: 0 0.5rem 1rem;
+  }
+  .spotify-embed.open { display: block; }
+  .spotify-embed iframe { display: block; width: 100%; border: none; }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .process-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.05);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .process-heading {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .process-text {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--muted);
+  }
+
+  .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    border-bottom: none !important;
+  }
+
+  .cta-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    max-width: 700px;
+  }
+  .cta-heading em { font-style: italic; color: var(--accent); }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0.9rem 2.2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+
+  .btn-secondary {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .btn-secondary:hover { color: var(--text); }
+
+  footer {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-name {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .footer-links { display: flex; gap: 2rem; }
+
+  .footer-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--accent); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s, transform 0.65s;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav, .hero, section, .trusted-section, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero-title { white-space: normal; }
+    .hero-photo { display: none; }
+    .hero-title .the, .hero-title .touch { font-size: clamp(2rem, 7vw, 3.5rem); }
+    .hero-title .human { font-size: clamp(3.5rem, 13vw, 6rem); }
+    .prop-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .cta-actions { flex-direction: column; }
+    .stats { flex-wrap: wrap; gap: 2rem; }
+    .track-right { display: none; }
+    .trusted-logos { gap: 0.8rem; }
+    .nav-links { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Matthew Adam Green</span>
+  <div class="nav-links">
+    <a href="https://instagram.com/matthewadamgreenmusic" target="_blank" class="nav-ig">Instagram</a>
+    <a href="mailto:matthewadamgreenmusic@gmail.com" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-photo">
+    <img src="images/hero.jpg" alt="Matthew Adam Green" />
+  </div>
+  <div class="hero-profile">
+    <div>
+      <div class="hero-name">Matthew Adam Green</div>
+      <div class="hero-label">Organic Vocals for Electronic, EDM, Melodic House & More</div>
+    </div>
+  </div>
+
+  <h1 class="hero-title">
+    <span class="the">The </span><span class="human">Human</span><span class="touch"> Touch.</span>
+  </h1>
+
+  <p class="hero-sub">Some records need a voice that no plugin can generate. One that finds the emotional centre of a track on instinct — and delivers it the same day.</p>
+
+  <div class="stats">
+    <div>
+      <div class="stat-val">10M+</div>
+      <div class="stat-lbl">Streams</div>
+    </div>
+    <div>
+      <div class="stat-val">5</div>
+      <div class="stat-lbl">Label Credits</div>
+    </div>
+    <div>
+      <div class="stat-val">3 Days</div>
+      <div class="stat-lbl">Topline Turnaround</div>
+    </div>
+  </div>
+</section>
+
+<div class="trusted-section reveal">
+  <div class="trusted-label">Trusted by</div>
+  <div class="trusted-logos">
+    <span class="trusted-logo">Enhanced</span>
+    <span class="trusted-logo">BitBird</span>
+    <span class="trusted-logo">Beyond</span>
+    <span class="trusted-logo">Fast Friends</span>
+    <span class="trusted-logo">Chapter Eight</span>
+  </div>
+</div>
+
+<section>
+  <div class="sec-header reveal">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">What I bring</h2>
+  </div>
+  <div class="prop-grid reveal">
+    <div class="prop-item">
+      <div class="prop-top">
+        <span class="prop-icon">✦</span>
+        <span class="prop-heading">Completed toplines, fast</span>
+      </div>
+      <div class="prop-text">Send me a track and I'll return a finished vocal topline — melody, lyrics, recorded — within 3 working days. Not a demo. A full vocal.</div>
+    </div>
+    <div class="prop-item">
+      <div class="prop-top">
+        <span class="prop-icon">◈</span>
+        <span class="prop-heading">The thing AI can't replicate</span>
+      </div>
+      <div class="prop-text">Finding the specific lyrical idea that makes a track feel like it was always supposed to exist that way. That gap between a good instrumental and a record — this is where I work.</div>
+    </div>
+    <div class="prop-item">
+      <div class="prop-top">
+        <span class="prop-icon">◎</span>
+        <span class="prop-heading">Label-ready by default</span>
+      </div>
+      <div class="prop-text">I know what a label wants before it sends notes — and I deliver to that standard the first time. No revision cycles. No onboarding. Just a finished vocal that's ready to go.</div>
+    </div>
+    <div class="prop-item">
+      <div class="prop-top">
+        <span class="prop-icon">⟡</span>
+        <span class="prop-heading">Built for electronic music</span>
+      </div>
+      <div class="prop-text">Melodic house, EDM, organic electronic. I know the genre, the aesthetic, and exactly what these tracks need vocally. No onboarding required.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-header reveal">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Hear my work.</h2>
+  </div>
+
+  <div class="track-item reveal" onclick="toggleEmbed('t1')">
+    <div class="track-row">
+      <span class="track-num">01</span>
+      <div>
+        <div class="track-title">Follow the Feeling</div>
+        <div class="track-meta">Ourson ft. Matthew Adam Green</div>
+      </div>
+      <div class="track-right">
+        <span class="track-role">Vocals & Topline</span>
+        <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
+      </div>
+    </div>
+    <div class="spotify-embed" id="t1">
+      <iframe src="https://open.spotify.com/embed/track/4qbXl2AKlncwfKlqMREhwf?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="track-item reveal" onclick="toggleEmbed('t2')">
+    <div class="track-row">
+      <span class="track-num">02</span>
+      <div>
+        <div class="track-title">Those Days Are Gone</div>
+        <div class="track-meta">October Mills ft. Matthew Adam Green</div>
+      </div>
+      <div class="track-right">
+        <span class="track-role">Vocals & Topline</span>
+        <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
+      </div>
+    </div>
+    <div class="spotify-embed" id="t2">
+      <iframe src="https://open.spotify.com/embed/track/1W0vOLGv6EUapgi3hG0pzI?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="track-item reveal" onclick="toggleEmbed('t3')">
+    <div class="track-row">
+      <span class="track-num">03</span>
+      <div>
+        <div class="track-title">AMEN</div>
+        <div class="track-meta">St. Mary ft. Matthew Adam Green</div>
+      </div>
+      <div class="track-right">
+        <span class="track-role">Vocals & Topline</span>
+        <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
+      </div>
+    </div>
+    <div class="spotify-embed" id="t3">
+      <iframe src="https://open.spotify.com/embed/track/1gHWRNW83L6LiOUf7Xrx6g?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="track-item reveal" onclick="toggleEmbed('t4')">
+    <div class="track-row">
+      <span class="track-num">04</span>
+      <div>
+        <div class="track-title">Never Letting Go</div>
+        <div class="track-meta">CALILA</div>
+      </div>
+      <div class="track-right">
+        <span class="track-role">Vocals & Topline</span>
+        <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
+      </div>
+    </div>
+    <div class="spotify-embed" id="t4">
+      <iframe src="https://open.spotify.com/embed/track/516E78okSkg4l0seNSqHHC?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="track-item reveal" onclick="toggleEmbed('t5')">
+    <div class="track-row">
+      <span class="track-num">05</span>
+      <div>
+        <div class="track-title">My Heart Remains</div>
+        <div class="track-meta">Zamas ft. Matthew Adam Green</div>
+      </div>
+      <div class="track-right">
+        <span class="track-role">Vocals & Topline</span>
+        <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
+      </div>
+    </div>
+    <div class="spotify-embed" id="t5">
+      <iframe src="https://open.spotify.com/embed/track/4CZr5l2tdrfArIBAbg7H6d?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <div class="sec-header reveal">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">How it works</h2>
+  </div>
+  <div class="process-grid">
+    <div class="reveal">
+      <div class="process-num">01</div>
+      <div class="process-heading">Send the track</div>
+      <div class="process-text">Share your instrumental — rough mix is fine. Tell me the mood, the direction, anything you're hearing. Or nothing at all.</div>
+    </div>
+    <div class="reveal">
+      <div class="process-num">02</div>
+      <div class="process-heading">Back to you within 3 working days</div>
+      <div class="process-text">A completed topline — melody, lyrics, recorded vocals — returned within 3 working days. Not a concept or a rough idea. A finished creative direction ready to build from.</div>
+    </div>
+    <div class="reveal">
+      <div class="process-num">03</div>
+      <div class="process-heading">Refine and release</div>
+      <div class="process-text">We lock the vocal performance and agree splits. Full stems and session files delivered. Ready for your pipeline.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2 class="cta-heading reveal">Ready to give your next record <em>the human touch?</em></h2>
+  <div class="cta-actions reveal">
+    <a href="mailto:matthewadamgreenmusic@gmail.com" class="btn-primary">Work with me</a>
+    <a href="https://open.spotify.com/artist/5W0rgySvbnUMd8VkgQfg1T" target="_blank" class="btn-secondary">Full catalogue →</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-name">Matthew Adam Green © 2026</span>
+  <div class="footer-links">
+    <a href="mailto:matthewadamgreenmusic@gmail.com" class="footer-link">Email</a>
+    <a href="https://instagram.com/matthewadamgreenmusic" target="_blank" class="footer-link">Instagram</a>
+  </div>
+</footer>
+
+<script>
+  function toggleEmbed(id) {
+    const el = document.getElementById(id);
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.spotify-embed').forEach(e => e.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+
+  const obs = new IntersectionObserver(els => els.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  }), { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
