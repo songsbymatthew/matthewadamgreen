@@ -156,10 +156,7 @@
     animation: fadeUp 0.7s 0.35s forwards;
   }
 
-  .hero-title em {
-    font-style: italic;
-    color: var(--accent);
-  }
+  .hero-title em { font-style: italic; color: var(--accent); }
 
   .hero-sub {
     max-width: 520px;
@@ -292,9 +289,9 @@
 
   .review-text {
     font-family: 'Playfair Display', serif;
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     font-style: italic;
-    line-height: 1.8;
+    line-height: 1.75;
     color: rgba(255,255,255,0.8);
     flex: 1;
   }
@@ -407,7 +404,7 @@
     text-transform: uppercase;
   }
 
-  .track-label-tag {
+  .track-label {
     font-size: 0.65rem;
     letter-spacing: 0.1em;
     color: rgba(255,211,150,0.6);
@@ -473,7 +470,7 @@
 
   .process-heading {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 0.7rem;
@@ -560,23 +557,23 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+  @media (max-width: 900px) {
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 768px) {
     nav, .hero, section, .trusted-section, .reviews-section, .cta-section, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
     .hero-photo { display: none; }
     .hero-title { font-size: clamp(2.2rem, 9vw, 3.5rem); }
     .prop-grid { grid-template-columns: 1fr; }
-    .process-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .reviews-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; gap: 2rem; }
     .cta-actions { flex-direction: column; }
     .stats { flex-wrap: wrap; gap: 2rem; }
     .track-right { display: none; }
     .trusted-logos { gap: 0.8rem; }
     .nav-links { gap: 1rem; }
     .hero-ctas { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  }
-
-  @media (max-width: 480px) {
-    .process-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -603,7 +600,7 @@
   <h1 class="hero-title">The vocal your track has been <em>missing.</em></h1>
   <p class="hero-sub">Toplines written, recorded and delivered in 3 days. Breathy, human and melancholic vocals for melodic house, organic electronic and emotional EDM.</p>
   <div class="hero-ctas">
-    <a href="mailto:matthewadamgreenmusic@gmail.com" class="btn-primary">Send me your track -&gt;</a>
+    <a href="mailto:matthewadamgreenmusic@gmail.com" class="btn-primary">Send me your track &rarr;</a>
     <a href="#work" class="btn-secondary">Hear the catalogue</a>
   </div>
   <div class="stats">
@@ -637,15 +634,15 @@
 <div class="reviews-section reveal">
   <div class="reviews-grid">
     <div class="review-card">
-      <p class="review-text">"Was so so great working with Matthew!! A total pro - totally understood what I was going for with my track and took it to the next level. Amazing songwriting and performances, and really beautiful layered vocal stacks!"</p>
+      <p class="review-text">Was so so great working with Matthew!! A total pro - totally understood what I was going for with my track and took it to the next level. Amazing songwriting and performances, and really beautiful layered vocal stacks!</p>
       <p class="review-attr">-- softsky</p>
     </div>
     <div class="review-card">
-      <p class="review-text">"Matthew was such an amazing artist to collaborate with! Incredibly talented, communicative and professional with a quick turnaround. He really understood my vision from the beginning and took it to the next level - would recommend 100%!"</p>
+      <p class="review-text">Matthew was such an amazing artist to collaborate with! Incredibly talented, communicative and professional with a quick turnaround. He really understood my vision from the beginning and took it to the next level - would recommend 100%!</p>
       <p class="review-attr">-- St. Mary</p>
     </div>
     <div class="review-card">
-      <p class="review-text">"His voice is beautiful and truly unique, fitting perfectly with my melodic house sound. He was patient, reliable, and very quick with revisions. I highly recommend Matthew if you are looking for unique vocals, strong melodies, and great songwriting skills!"</p>
+      <p class="review-text">His voice is beautiful and truly unique, fitting perfectly with my melodic house sound. He was patient, reliable, and very quick with revisions. I highly recommend Matthew if you are looking for unique vocals, strong melodies, and great songwriting skills!</p>
       <p class="review-attr">-- KLYNE WELT</p>
     </div>
   </div>
@@ -686,94 +683,84 @@
     <h2 class="sec-title">Hear my work.</h2>
   </div>
 
-  <div class="track-item reveal" onclick="toggleEmbed('t1')">
+  <div class="track-item reveal" onclick="toggleEmbed('t1', '4qbXl2AKlncwfKlqMREhwf')">
     <div class="track-row">
       <span class="track-num">01</span>
       <div>
         <div class="track-title">Follow the Feeling</div>
         <div class="track-meta">Ourson ft. Matthew Adam Green</div>
-        <div class="track-label-tag">Released on Beyond</div>
+        <div class="track-label">Enhanced Music</div>
       </div>
       <div class="track-right">
         <span class="track-role">Vocals &amp; Topline</span>
         <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
       </div>
     </div>
-    <div class="spotify-embed" id="t1">
-      <iframe src="https://open.spotify.com/embed/track/4qbXl2AKlncwfKlqMREhwf?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <div class="spotify-embed" id="t1"></div>
   </div>
 
-  <div class="track-item reveal" onclick="toggleEmbed('t2')">
+  <div class="track-item reveal" onclick="toggleEmbed('t2', '1W0vOLGv6EUapgi3hG0pzI')">
     <div class="track-row">
       <span class="track-num">02</span>
       <div>
         <div class="track-title">Those Days Are Gone</div>
         <div class="track-meta">October Mills ft. Matthew Adam Green</div>
-        <div class="track-label-tag">Released on Enhanced</div>
+        <div class="track-label">Beyond</div>
       </div>
       <div class="track-right">
         <span class="track-role">Vocals &amp; Topline</span>
         <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
       </div>
     </div>
-    <div class="spotify-embed" id="t2">
-      <iframe src="https://open.spotify.com/embed/track/1W0vOLGv6EUapgi3hG0pzI?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <div class="spotify-embed" id="t2"></div>
   </div>
 
-  <div class="track-item reveal" onclick="toggleEmbed('t3')">
+  <div class="track-item reveal" onclick="toggleEmbed('t3', '1gHWRNW83L6LiOUf7Xrx6g')">
     <div class="track-row">
       <span class="track-num">03</span>
       <div>
         <div class="track-title">AMEN</div>
         <div class="track-meta">St. Mary ft. Matthew Adam Green</div>
-        <div class="track-label-tag">Released on BitBird</div>
+        <div class="track-label">Fast Friends</div>
       </div>
       <div class="track-right">
         <span class="track-role">Vocals &amp; Topline</span>
         <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
       </div>
     </div>
-    <div class="spotify-embed" id="t3">
-      <iframe src="https://open.spotify.com/embed/track/1gHWRNW83L6LiOUf7Xrx6g?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <div class="spotify-embed" id="t3"></div>
   </div>
 
-  <div class="track-item reveal" onclick="toggleEmbed('t4')">
+  <div class="track-item reveal" onclick="toggleEmbed('t4', '516E78okSkg4l0seNSqHHC')">
     <div class="track-row">
       <span class="track-num">04</span>
       <div>
         <div class="track-title">Never Letting Go</div>
         <div class="track-meta">CALILA</div>
-        <div class="track-label-tag">Independent Release</div>
+        <div class="track-label">Chapter Eight</div>
       </div>
       <div class="track-right">
         <span class="track-role">Vocals &amp; Topline</span>
         <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
       </div>
     </div>
-    <div class="spotify-embed" id="t4">
-      <iframe src="https://open.spotify.com/embed/track/516E78okSkg4l0seNSqHHC?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <div class="spotify-embed" id="t4"></div>
   </div>
 
-  <div class="track-item reveal" onclick="toggleEmbed('t5')">
+  <div class="track-item reveal" onclick="toggleEmbed('t5', '4CZr5l2tdrfArIBAbg7H6d')">
     <div class="track-row">
       <span class="track-num">05</span>
       <div>
         <div class="track-title">My Heart Remains</div>
         <div class="track-meta">Zamas ft. Matthew Adam Green</div>
-        <div class="track-label-tag">Released on Esnight Records</div>
+        <div class="track-label">BitBird</div>
       </div>
       <div class="track-right">
         <span class="track-role">Vocals &amp; Topline</span>
         <div class="track-btn"><svg viewBox="0 0 8 10" fill="currentColor"><path d="M0 0l8 5-8 5z"/></svg></div>
       </div>
     </div>
-    <div class="spotify-embed" id="t5">
-      <iframe src="https://open.spotify.com/embed/track/4CZr5l2tdrfArIBAbg7H6d?theme=0" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <div class="spotify-embed" id="t5"></div>
   </div>
 
 </section>
@@ -811,13 +798,13 @@
   <h2 class="cta-heading reveal">Your next release could be three days away.</h2>
   <p class="cta-sub reveal">Send the track and the brief. I will confirm terms, start writing, and have a finished vocal back to you within 3 working days.</p>
   <div class="cta-actions reveal">
-    <a href="mailto:matthewadamgreenmusic@gmail.com" class="btn-primary">Send me your track -&gt;</a>
+    <a href="mailto:matthewadamgreenmusic@gmail.com" class="btn-primary">Send me your track &rarr;</a>
     <a href="https://open.spotify.com/artist/5W0rgySvbnUMd8VkgQfg1T" target="_blank" class="btn-secondary">Hear the catalogue</a>
   </div>
 </section>
 
 <footer>
-  <span class="footer-name">Matthew Adam Green 2026</span>
+  <span class="footer-name">Matthew Adam Green &copy; 2026</span>
   <div class="footer-links">
     <a href="mailto:matthewadamgreenmusic@gmail.com" class="footer-link">Email</a>
     <a href="https://instagram.com/matthewadamgreenmusic" target="_blank" class="footer-link">Instagram</a>
@@ -825,11 +812,21 @@
 </footer>
 
 <script>
-  function toggleEmbed(id) {
+  function toggleEmbed(id, trackId) {
     const el = document.getElementById(id);
     const isOpen = el.classList.contains('open');
-    document.querySelectorAll('.spotify-embed').forEach(e => e.classList.remove('open'));
-    if (!isOpen) el.classList.add('open');
+
+    // Close all embeds and clear their iframes to stop playback
+    document.querySelectorAll('.spotify-embed').forEach(function(e) {
+      e.classList.remove('open');
+      e.innerHTML = '';
+    });
+
+    // If it wasn't open, open it and inject iframe with autoplay
+    if (!isOpen) {
+      el.classList.add('open');
+      el.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + trackId + '?theme=0&autoplay=1" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+    }
   }
 
   const obs = new IntersectionObserver(els => els.forEach(e => {
